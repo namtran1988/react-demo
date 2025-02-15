@@ -1,0 +1,187 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+nav{
+  float:left;
+  width: 20%;
+  padding: 20px;
+  background-color: #343a40;
+  height: 100vh;
+  position: relative;
+}
+
+nav .navigation{
+  list-style-type: none;
+  padding-left: 42px;
+  font-size: 19px;
+  margin-top:150px;
+  margin-bottom: 50px;
+}
+
+nav .navigation li{
+  display: block;
+  margin-left: 0;
+}
+
+nav .navigation li a{
+  padding:7px 0;
+  display: block;
+  cursor: pointer;
+}
+
+nav .navigation li a.active{
+  color: #80db66;
+}
+
+nav .navigation li a:hover{
+  color: #80db66;
+}
+
+article{
+  float: left;
+  width: 80%;
+  padding:20px;
+  background-image: url("/images/slider-bg.jpg");
+  background-repeat: repeat;
+  height: 100vh;
+  position: relative;
+}
+
+article .intro{
+  position:absolute;
+  left: 0;
+  top:23%;
+}
+
+article .intro .hello{
+  color: #80db66;
+  font-size: 30px;
+  padding-left: 15px;
+}
+
+article .intro .name{
+  font-size: 114px;
+  width: 74px;
+  margin-top: 20px;
+}
+
+article .intro .passionate{
+  font-size: 27px;
+  padding-left: 15px;
+  margin-top: 30px;
+}
+
+article .intro .passionate span{
+  font-size: 50px;
+  color: #80db66;
+}
+
+article .intro .sayhello{
+  margin-top:60px;
+  padding-left: 15px;
+}
+
+article .intro .sayhello a{
+  border: 1px solid #80db66; 
+  background-color: #80db66;
+  padding:12px 28px 11px 28px;
+  border-radius: 5px;
+}
+
+article .person{
+  position:absolute;
+  right:0;
+  bottom: 0;
+  text-align: right;
+}
+
+article .person img{
+  width: 90%;
+}
+
+article .social{
+  position:absolute;
+  top:30%;
+  right:3%;
+  list-style-type: none;
+}
+article .social li{
+  padding: 5px 0;
+}
+
+article .social img{
+  width: 30px;
+}
+
+section::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo-wrapper{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo-wrapper img{
+  width: 156px;
+}
+
+.csv-button{
+  text-align: center;
+  position:absolute;
+  bottom:5%;
+  width: 100%;
+  margin-left:-20px;
+}
+
+.csv-button a{
+  border:1px solid #80db66;
+  padding:12px 28px 11px 28px;
+  border-radius: 5px;
+}
+
+.csv-button a:hover{
+  background-color: #80db66;
+}

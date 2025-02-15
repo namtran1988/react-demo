@@ -1,0 +1,17 @@
+nav{
+  float:left;
+  width: 30%;
+  padding: 20px;
+}
+
+article{
+  float: left;
+  width: 70%;
+  padding:20px;
+}
+
+section::after{
+  content: "";
+  display: table;
+  clear: both;
+}
