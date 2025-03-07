@@ -41,8 +41,8 @@ a {
   }
 }
 
-nav{
-  float:left;
+nav {
+  float: left;
   width: 20%;
   padding: 20px;
   background-color: #343a40;
@@ -50,138 +50,207 @@ nav{
   position: relative;
 }
 
-nav .navigation{
+nav .navigation {
   list-style-type: none;
   padding-left: 42px;
   font-size: 19px;
-  margin-top:150px;
+  margin-top: 150px;
   margin-bottom: 50px;
 }
 
-nav .navigation li{
+nav .navigation li {
   display: block;
   margin-left: 0;
 }
 
-nav .navigation li a{
-  padding:7px 0;
+nav .navigation li a {
+  padding: 7px 0;
   display: block;
   cursor: pointer;
+  color: white;
 }
 
-nav .navigation li a.active{
+nav .navigation li a.active {
   color: #80db66;
 }
 
-nav .navigation li a:hover{
+nav .navigation li a:hover {
   color: #80db66;
 }
 
-article{
+article {
   float: left;
   width: 80%;
-  padding:20px;
-  background-image: url("/images/slider-bg.jpg");
-  background-repeat: repeat;
+  padding: 20px;
   height: 100vh;
   position: relative;
 }
 
-article .intro{
-  position:absolute;
-  left: 0;
-  top:23%;
+article.home {
+  background-image: url("/images/slider-bg.jpg");
+  background-repeat: repeat;
 }
 
-article .intro .hello{
+article.about .title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article .intro {
+  position: absolute;
+  left: 0;
+  top: 23%;
+}
+
+article .intro .hello {
   color: #80db66;
   font-size: 30px;
   padding-left: 15px;
 }
 
-article .intro .name{
+article .intro .name {
   font-size: 114px;
   width: 74px;
   margin-top: 20px;
+  color: white;
 }
 
-article .intro .passionate{
+article .intro .passionate {
   font-size: 27px;
   padding-left: 15px;
   margin-top: 30px;
+  color: white;
 }
 
-article .intro .passionate span{
+article .intro .passionate span {
   font-size: 50px;
   color: #80db66;
 }
 
-article .intro .sayhello{
-  margin-top:60px;
+article .intro .sayhello {
+  margin-top: 60px;
   padding-left: 15px;
 }
 
-article .intro .sayhello a{
-  border: 1px solid #80db66; 
+article .intro .sayhello a {
+  border: 1px solid #80db66;
   background-color: #80db66;
-  padding:12px 28px 11px 28px;
+  padding: 12px 28px 11px 28px;
   border-radius: 5px;
 }
 
-article .person{
-  position:absolute;
-  right:0;
+article .person {
+  position: absolute;
+  right: 0;
   bottom: 0;
   text-align: right;
+  width: 60%;
 }
 
-article .person img{
+article .person img {
   width: 90%;
 }
 
-article .social{
-  position:absolute;
-  top:30%;
-  right:3%;
+article .social {
+  position: absolute;
+  top: 30%;
+  right: 3%;
   list-style-type: none;
 }
-article .social li{
+
+article .social li {
   padding: 5px 0;
 }
 
-article .social img{
+article .social img {
   width: 30px;
 }
 
-section::after{
+section::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.logo-wrapper{
+.logo-wrapper {
   text-align: center;
   margin-top: 50px;
 }
 
-.logo-wrapper img{
+.logo-wrapper img {
   width: 156px;
 }
 
-.csv-button{
+.csv-button {
   text-align: center;
-  position:absolute;
-  bottom:5%;
+  position: absolute;
+  bottom: 5%;
   width: 100%;
-  margin-left:-20px;
+  margin-left: -20px;
 }
 
-.csv-button a{
-  border:1px solid #80db66;
-  padding:12px 28px 11px 28px;
+.csv-button a {
+  border: 1px solid #80db66;
+  padding: 12px 28px 11px 28px;
   border-radius: 5px;
 }
 
-.csv-button a:hover{
+.csv-button a:hover {
   background-color: #80db66;
+}
+
+.verticle-form .item {
+  padding: 10px 0;
+
+}
+
+.verticle-form .item label {
+  min-width: 100px;
+  display: inline-block;
+}
+.verticle-form .item input{
+  border: solid 1px gray;
+    border-color: black;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 5px;
+}
+.verticle-form .item select{
+  border: solid 1px gray;
+  border-color: black;
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.verticle-form button {
+  padding: 5px 10px;
+  border: 1px solid #80db66;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.verticle-form button:hover {
+  background-color: #80db66;
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-data li{
+  padding:5px;
+  font-size: 20px;
+}
+
+@media screen and (max-width:1024px) {
+  article .intro .passionate {
+    font-size: 25px;
+  }
+
+  article .intro .passionate span {
+    font-size: 34px;
+  }
 }
