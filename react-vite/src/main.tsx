@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { MasterLayout } from './MasterLayout.tsx'
 import { Login } from './Login.tsx'
 import { Register } from './Register.tsx'
+import { CacheDemo } from './Cache.tsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     children:[
       {index:true, element: <App/>},
       {path: "login", element: <Login/>},
-      {path: "register", element: <Register/>}
+      {path: "register", element: <Register/>},
+      {path: "cache", element: <CacheDemo/>}
     ]
   }
 ]);

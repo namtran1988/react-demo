@@ -7,6 +7,7 @@ import { BigTitle } from './BigTitle'
 import { MasterLayout } from './MasterLayout'
 import { CountButton } from './CountButton'
 import axios from 'axios';
+import { Link } from 'react-router'
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
@@ -67,7 +68,7 @@ function App() {
   }, []);
 
   const requestData = useCallback(() => {
-    axios.get(`${API_URL}/WeatherForecast/authorized`, {
+    axios.get(`${API_URL}/WeatherForecast/public`, {
       headers: {
         'Authorization': `Bearer ${sessionStorage.getItem("token")}`
       }
@@ -75,13 +76,15 @@ function App() {
       console.log(e);
     })
 
-    axios.get
    // fetch data from API
     setFormData({name: "John Doe", email: "john.doe@example.com"});
   },[formData]);
 
   return (
     <>
+    <ul>
+      <li><Link to="/cache">Cache demo</Link></li>
+    </ul>
     <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
