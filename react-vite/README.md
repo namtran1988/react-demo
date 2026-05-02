@@ -1,3 +1,6 @@
+Các bạn thêm file sau vào folder react-vite: .env
+Sau khi thêm file .env, các bạn copy và để khai báo sau vào trong file nhé:
+```VITE_API_URL=http://localhost:5079```
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
