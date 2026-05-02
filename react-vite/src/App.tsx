@@ -6,6 +6,8 @@ import './App.css'
 import { BigTitle } from './BigTitle'
 import { MasterLayout } from './MasterLayout'
 import { CountButton } from './CountButton'
+import axios from 'axios';
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [count, setCount] = useState(0);
@@ -65,6 +67,15 @@ function App() {
   }, []);
 
   const requestData = useCallback(() => {
+    axios.get(`${API_URL}/WeatherForecast/authorized`, {
+      headers: {
+        'Authorization': `Bearer ${sessionStorage.getItem("token")}`
+      }
+    }).then(e => {
+      console.log(e);
+    })
+
+    axios.get
    // fetch data from API
     setFormData({name: "John Doe", email: "john.doe@example.com"});
   },[formData]);

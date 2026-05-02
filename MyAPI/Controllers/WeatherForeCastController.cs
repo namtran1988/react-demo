@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -10,15 +10,16 @@ public class WeatherForecastController : ControllerBase
     };
 
     [Authorize]
-    [HttpGet]
+    [HttpGet("authorized")]
     public async Task<IActionResult> Get()
     {
-        return Ok("test");
+        return Ok(new { data = "Authorize endpoint" });
     }
 
     [HttpGet("public")]
-    public async Task<IActionResult> Test()
+    public async Task<IActionResult> Test([FromQuery] string studentId, [FromQuery] string email)
     {
-        return Ok("public endpoint");
+        var query = "select * from Students where studentId = "+ studentId;
+        return Ok(new { data = query });
     }
 }

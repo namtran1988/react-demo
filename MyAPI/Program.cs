@@ -41,8 +41,14 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
+builder.Services.AddCors(option => option.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:5173")
+                                                                            .AllowAnyHeader()
+                                                                            .AllowAnyMethod()
+                                                                            .AllowCredentials()));
 
 var app = builder.Build();
+
+app.UseCors();
 
 // 3. Enable Authentication and Authorization Middleware
 app.UseAuthentication();

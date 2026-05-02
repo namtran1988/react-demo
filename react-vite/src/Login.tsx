@@ -11,10 +11,12 @@ export function Login() {
 
     const onSubmitHandler = useCallback(async(e: React.FormEvent<HTMLFormElement>) => { 
         e.preventDefault();
-        await axios.postForm(`${API_URL}/account/login`,formData).then(e=>{console.log("test response", e)})
+        await axios.postForm(`${API_URL}/account/login`,formData).then(e=>{console.log("test response", e);
+            sessionStorage.setItem("token", e.data.token);
+        })
     }, [formData]);
     return (<form onSubmit={onSubmitHandler}>
-        <div><label>Email: </label>
+        <div><label>User name: </label>
             <input type="text" onChange={onInputChange} name="userName" autoComplete="false" /></div>
 
         <div><label>Password: </label>
